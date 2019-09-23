@@ -1,0 +1,41 @@
+{% extends 'facility.html' %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron jumbo-gradient">
+    <h1 class="display-3">Facility Dashboard</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="" class="nav-link active" data-toggle="tab">Actions</a></li>
+                <li class="nav-item"><a href="" class="nav-link active" data-toggle="tab">Dashboard</a></li>
+            </ul>
+            <div class="tab-content panel-body">
+                <div id="actions" class="tab-pane active">
+                    <div class="card-deck">
+                        <div class="card bg-primary text-white">
+                            <div class="card-header">
+                                <h4 class="card-title">Facility Management</h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item hvr-grow"><a
+                                            href="{% url 'facilityapp:facility-create'%}" class="card-link">Create
+                                            Facility</a></li>
+                                    <li class="list-group-item hvr-grow"><a href="{% url 'facilityapp:facility-list'%}"
+                                            class="card-link">Facility
+                                            List</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
